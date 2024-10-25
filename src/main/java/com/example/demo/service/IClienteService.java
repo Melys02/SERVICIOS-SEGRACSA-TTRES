@@ -7,4 +7,8 @@ import java.util.List;
 public interface IClienteService {
     List<PedidoInformeDto> obtenerPedidosPorCliente(Integer idcliente);
 
+    interface IEmpaqueService {
+        void actualizarPrecioEmpaque(Integer idempaque,Double precio);
+
+    }
 }

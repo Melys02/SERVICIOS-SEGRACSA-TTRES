@@ -2,6 +2,7 @@ package com.example.demo.service.impl;
 
 import com.example.demo.model.Pedido;
 import com.example.demo.repository.ClienteRepository;
+import com.example.demo.repository.EmpaqueRepository;
 import com.example.demo.repository.PedidoRepository;
 import com.example.demo.service.IPedidoService;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ import java.util.List;
 public class PedidoService implements IPedidoService {
     private final PedidoRepository pedidoRepository;
     private final ClienteRepository clienteRepository;
+    private final EmpaqueRepository empaqueRepository;
     @Override
     public List<Pedido> buscarPedidosPorClienteYEstadoLogistica(Integer clienteId, String estadoEnvio) {
         return pedidoRepository.buscarPedidosPorClienteYEstadoLogistica(clienteId, estadoEnvio);

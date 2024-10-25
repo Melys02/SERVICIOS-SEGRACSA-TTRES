@@ -21,5 +21,9 @@ public class Pedido {
 
     private Date fechaPedido;
 
+
+
     private Double total;
+
+
 }
