@@ -1,4 +1,12 @@
 package com.example.demo.repository;
 
-public interface EmpaqueRepository {
+import com.example.demo.model.Empaque;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface EmpaqueRepository extends JpaRepository<Empaque,Integer> {
+    List<Empaque> findByPedidoId(Integer pedidoId);
 }
